@@ -1,0 +1,2 @@
+add_executable(recent_trade_vs_mid recent_trade_vs_mid.cpp)
+target_link_libraries(recent_trade_vs_mid PRIVATE flexplanner::flexplanner)

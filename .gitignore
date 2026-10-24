@@ -1,0 +1,28 @@
+# build directories
+build/
+build-*/
+out/
+cmake-build-*/
+
+# compilers & tools
+.cache/
+compile_commands.json
+CMakeUserPresets.json
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# artifacts
+*.o
+*.obj
+*.exe
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pdb
+*.wasm
