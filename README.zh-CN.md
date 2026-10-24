@@ -4,7 +4,6 @@
 [Flex Model: an event-driven feature engineering system](https://blog.janestreet.com/flex-model-an-event-driven-feature-engineering-system/)
 ——原文在系统启动时做规划,这里把规划又往前挪了一个阶段,整个搬进编译期。
 
-[![CI](https://github.com/your-org/flexplanner/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/flexplanner/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 从一个具体的难题说起
