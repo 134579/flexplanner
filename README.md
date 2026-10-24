@@ -5,7 +5,6 @@ compile-time **event plans** — a compact re-implementation of the planner
 architecture described in Jane Street's blog post
 [Flex Model: an event-driven feature engineering system](https://blog.janestreet.com/flex-model-an-event-driven-feature-engineering-system/).
 
-[![CI](https://github.com/your-org/flexplanner/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/flexplanner/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## The idea
