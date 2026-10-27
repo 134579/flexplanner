@@ -22,6 +22,7 @@ function(flexplanner_add_compile_fail_test name expected_text)
         COMMAND ${CMAKE_COMMAND}
             -DCXX_COMPILER=${CMAKE_CXX_COMPILER}
             "-DCXX_FLAGS=${CMAKE_CXX_FLAGS}"
+            -DINCLUDE_DIR=${PROJECT_SOURCE_DIR}/include
             -DSTD_FLAG=${std_flag}
             -DCOMPILE_ONLY_FLAG=${compile_only_flag}
             -DTEST_SOURCE=${CMAKE_CURRENT_SOURCE_DIR}/compile_fail/${name}.cpp

@@ -1,15 +1,19 @@
 # compile_fail_check.cmake — ctest script for compile-fail cases.
 # Run via `cmake -P` with:
-#   CXX_COMPILER, CXX_FLAGS, STD_FLAG, COMPILE_ONLY_FLAG, TEST_SOURCE,
-#   EXPECTED_TEXT, COMPILER_ID
+#   CXX_COMPILER, CXX_FLAGS, INCLUDE_DIR, STD_FLAG, COMPILE_ONLY_FLAG,
+#   TEST_SOURCE, EXPECTED_TEXT, COMPILER_ID
 # Passes when: compilation FAILS, and the diagnostics contain EXPECTED_TEXT
 # (the text check is enforced on Clang/GCC; MSVC wording differs, so there
 # only the failure itself is required).
 
 separate_arguments(flags NATIVE_COMMAND "${CXX_FLAGS}")
 
+if(INCLUDE_DIR)
+    set(include_flag "-I${INCLUDE_DIR}")
+endif()
+
 execute_process(
-    COMMAND ${CXX_COMPILER} ${flags} ${STD_FLAG} ${COMPILE_ONLY_FLAG} ${TEST_SOURCE}
+    COMMAND ${CXX_COMPILER} ${flags} ${include_flag} ${STD_FLAG} ${COMPILE_ONLY_FLAG} ${TEST_SOURCE}
     WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
     RESULT_VARIABLE result
     OUTPUT_VARIABLE stdout
